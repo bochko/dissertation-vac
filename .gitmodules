@@ -3,4 +3,4 @@
 	url = https://github.com/bochko/dissertation-filesysnotify.git
 [submodule "dissertation-filesyscoord"]
 	path = dissertation-filesyscoord
-	url = https://github.com/bochko/dissertation-filesyscoord
+	url = https://github.com/bochko/dissertation-filesyscoord.git
