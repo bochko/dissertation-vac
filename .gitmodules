@@ -1,0 +1,3 @@
+[submodule "dissertation-filesysnotify"]
+	path = dissertation-filesysnotify
+	url = https://github.com/bochko/dissertation-filesysnotify.git
