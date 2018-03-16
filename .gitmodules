@@ -4,3 +4,6 @@
 [submodule "dissertation-filesyscoord"]
 	path = dissertation-filesyscoord
 	url = https://github.com/bochko/dissertation-filesyscoord
+[submodule "dissertation-shell-controlcentre"]
+	path = dissertation-shell-controlcentre
+	url = https://github.com/bochko/dissertation-shell-controlcentre
