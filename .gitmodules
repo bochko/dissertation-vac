@@ -7,3 +7,6 @@
 [submodule "dissertation-shell-controlcentre"]
 	path = dissertation-shell-controlcentre
 	url = https://github.com/bochko/dissertation-shell-controlcentre
+[submodule "dissertation-jaspervc"]
+	path = dissertation-jaspervc
+	url = https://github.com/bochko/dissertation-jaspervc
