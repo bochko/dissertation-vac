@@ -1,4 +1,3 @@
-#!/bin/bash
 # install dep
 sudo apt-get install nano git-core python-dev bison libasound2-dev python-pyaudio --yes
 
