@@ -28,6 +28,9 @@ cd cmuclmtk/
 ./autogen.sh && make && sudo make install
 cd ..
 
+#use pip and client/requirements.txt to install python deps from jasper folder
+sudo pip install -r "client/requirements.txt"
+
 #fetch needed archives
 wget http://distfiles.macports.org/openfst/openfst-1.3.4.tar.gz
 wget https://github.com/mitlm/mitlm/releases/download/v0.4.1/mitlm_0.4.1.tar.gz
@@ -49,4 +52,23 @@ sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable
 sudo make install
 
 #installing phonetisaurus, m2m-aligner, and MITLM
+#no issues anticipated here
+cd m2m-aligner-1.2/
+sudo make
+cd ..
 
+cd mitlm-0.4.1/
+sudo ./configure
+sudo make install
+cd..
+
+cd is2013-conversion/phonetisaurus/src
+sudo make
+#some warnings may pop up, don't worry
+cd ..
+
+#move the m2m-aligner compilation units
+sudo cp m2m-aligner-1.2/m2m-aligner /usr/local/bin/m2m-aligner
+
+#move the phonetisaurus compilation units
+sudo cp is2013-conversion/bin/phonetisaurus-g2p /usr/local/bin/phonetisaurus-g2p
