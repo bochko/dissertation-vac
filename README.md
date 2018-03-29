@@ -71,3 +71,13 @@ sudo cp m2m-aligner-1.2/m2m-aligner /usr/local/bin/m2m-aligner
 
 #move the phonetisaurus compilation units
 sudo cp is2013-conversion/bin/phonetisaurus-g2p /usr/local/bin/phonetisaurus-g2p
+
+#build phonetisaurus FST model
+wget https://www.dropbox.com/s/kfht75czdwucni1/g014b2b.tgz
+tar -xvf g014b2b.tgz
+cd g014b2b/
+./compile-fst.sh
+cd ..
+mv g014b2b phonetisaurus
+
+#at this point we restart again
