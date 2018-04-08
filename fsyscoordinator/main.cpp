@@ -1,9 +1,7 @@
 #include <iostream>
-#include <sys/types.h>
 #include <unistd.h>
-#include <signal.h>
+#include <csignal>
 #include <wait.h>
-#include <sys/stat.h>
 #include <fstream>
 #include "ansic_log.h"
 

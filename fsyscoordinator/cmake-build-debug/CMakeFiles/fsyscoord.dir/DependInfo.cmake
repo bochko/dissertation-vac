@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.cpp" "/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles/fsyscoord.dir/ansic_log.cpp.o"
-  "/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/main.cpp" "/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o"
+  "/home/boyan/Dissertation/dissertation-main/fsyscoordinator/ansic_log.cpp" "/home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/ansic_log.cpp.o"
+  "/home/boyan/Dissertation/dissertation-main/fsyscoordinator/main.cpp" "/home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -43,10 +43,10 @@ RM = /home/boyan/Downloads/clion-2017.3.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord
+CMAKE_SOURCE_DIR = /home/boyan/Dissertation/dissertation-main/fsyscoordinator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug
+CMAKE_BINARY_DIR = /home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fsyscoord.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/fsyscoord.dir/flags.make
 
 CMakeFiles/fsyscoord.dir/main.cpp.o: CMakeFiles/fsyscoord.dir/flags.make
 CMakeFiles/fsyscoord.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fsyscoord.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsyscoord.dir/main.cpp.o -c /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fsyscoord.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsyscoord.dir/main.cpp.o -c /home/boyan/Dissertation/dissertation-main/fsyscoordinator/main.cpp
 
 CMakeFiles/fsyscoord.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fsyscoord.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/main.cpp > CMakeFiles/fsyscoord.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyan/Dissertation/dissertation-main/fsyscoordinator/main.cpp > CMakeFiles/fsyscoord.dir/main.cpp.i
 
 CMakeFiles/fsyscoord.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fsyscoord.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/main.cpp -o CMakeFiles/fsyscoord.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyan/Dissertation/dissertation-main/fsyscoordinator/main.cpp -o CMakeFiles/fsyscoord.dir/main.cpp.s
 
 CMakeFiles/fsyscoord.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/fsyscoord.dir/main.cpp.o.provides.build: CMakeFiles/fsyscoord.dir/mai
 
 CMakeFiles/fsyscoord.dir/ansic_log.cpp.o: CMakeFiles/fsyscoord.dir/flags.make
 CMakeFiles/fsyscoord.dir/ansic_log.cpp.o: ../ansic_log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fsyscoord.dir/ansic_log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsyscoord.dir/ansic_log.cpp.o -c /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fsyscoord.dir/ansic_log.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fsyscoord.dir/ansic_log.cpp.o -c /home/boyan/Dissertation/dissertation-main/fsyscoordinator/ansic_log.cpp
 
 CMakeFiles/fsyscoord.dir/ansic_log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fsyscoord.dir/ansic_log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.cpp > CMakeFiles/fsyscoord.dir/ansic_log.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/boyan/Dissertation/dissertation-main/fsyscoordinator/ansic_log.cpp > CMakeFiles/fsyscoord.dir/ansic_log.cpp.i
 
 CMakeFiles/fsyscoord.dir/ansic_log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fsyscoord.dir/ansic_log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.cpp -o CMakeFiles/fsyscoord.dir/ansic_log.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/boyan/Dissertation/dissertation-main/fsyscoordinator/ansic_log.cpp -o CMakeFiles/fsyscoord.dir/ansic_log.cpp.s
 
 CMakeFiles/fsyscoord.dir/ansic_log.cpp.o.requires:
 
@@ -117,7 +117,7 @@ fsyscoord: CMakeFiles/fsyscoord.dir/main.cpp.o
 fsyscoord: CMakeFiles/fsyscoord.dir/ansic_log.cpp.o
 fsyscoord: CMakeFiles/fsyscoord.dir/build.make
 fsyscoord: CMakeFiles/fsyscoord.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fsyscoord"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable fsyscoord"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fsyscoord.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/fsyscoord.dir/clean:
 .PHONY : CMakeFiles/fsyscoord.dir/clean
 
 CMakeFiles/fsyscoord.dir/depend:
-	cd /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug /home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/CMakeFiles/fsyscoord.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/boyan/Dissertation/dissertation-main/fsyscoordinator /home/boyan/Dissertation/dissertation-main/fsyscoordinator /home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug /home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug /home/boyan/Dissertation/dissertation-main/fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fsyscoord.dir/depend
 
