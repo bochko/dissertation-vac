@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="fsyscoord"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fsyscoord">
+				<Option output="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/fsyscoord" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 fsyscoord"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fsyscoord/fast">
+				<Option output="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/fsyscoord" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 fsyscoord/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.cpp">
+			<Option target="fsyscoord"/>
+		</Unit>
+		<Unit filename="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/ansic_log.h">
+			<Option target="fsyscoord"/>
+		</Unit>
+		<Unit filename="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/fsyscoord.h">
+			<Option target="fsyscoord"/>
+		</Unit>
+		<Unit filename="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/main.cpp">
+			<Option target="fsyscoord"/>
+		</Unit>
+		<Unit filename="/home/boyan/Dissertation/dissertation-main/dissertation-filesyscoord/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

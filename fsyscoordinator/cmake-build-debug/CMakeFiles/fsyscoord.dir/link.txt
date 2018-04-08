@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fsyscoord.dir/main.cpp.o CMakeFiles/fsyscoord.dir/ansic_log.cpp.o  -o fsyscoord 

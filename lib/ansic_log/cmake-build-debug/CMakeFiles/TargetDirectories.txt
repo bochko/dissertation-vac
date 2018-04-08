@@ -1,0 +1,3 @@
+/home/boyan/Dissertation/dissertation-lib/ansic_log/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/boyan/Dissertation/dissertation-lib/ansic_log/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/boyan/Dissertation/dissertation-lib/ansic_log/cmake-build-debug/CMakeFiles/ansic_log.dir

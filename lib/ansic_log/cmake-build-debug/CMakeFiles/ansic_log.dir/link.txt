@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ansic_log.dir/test.cpp.o CMakeFiles/ansic_log.dir/ansic_log.cpp.o  -o ansic_log 

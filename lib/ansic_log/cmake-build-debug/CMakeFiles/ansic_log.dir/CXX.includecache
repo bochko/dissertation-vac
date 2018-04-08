@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boyan/Dissertation/dissertation-lib/ansic_log/ansic_log.cpp
+ansic_log.h
+/home/boyan/Dissertation/dissertation-lib/ansic_log/ansic_log.h
+iostream
+-
+cstring
+-
+
+/home/boyan/Dissertation/dissertation-lib/ansic_log/ansic_log.h
+cstdlib
+-
+
+/home/boyan/Dissertation/dissertation-lib/ansic_log/test.cpp
+iostream
+-
+ansic_log.h
+/home/boyan/Dissertation/dissertation-lib/ansic_log/ansic_log.h
+
