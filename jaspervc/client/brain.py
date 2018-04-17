@@ -56,7 +56,7 @@ class Brain(object):
                      else 0, reverse=True)
         return modules
 
-    def query(self, texts):
+    def query(self, input):
         """
         Passes user input to the appropriate module, testing it against
         each candidate module's isValid function.
@@ -64,8 +64,9 @@ class Brain(object):
         Arguments:
         text -- user input, typically speech, to be parsed by a module
         """
+	text = input#.split()
         for module in self.modules:
-            for text in texts:
+            #for text in texts:
                 if module.isValid(text):
                     self._logger.debug("'%s' is a valid phrase for module " +
                                        "'%s'", text, module.__name__)

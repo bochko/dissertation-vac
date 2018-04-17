@@ -29,6 +29,7 @@ class Mic:
         self._logger = logging.getLogger(__name__)
         self.speaker = speaker
         self.passive_stt_engine = passive_stt_engine
+	print("::: PASSIVE STT ENGINE: %s" % self.passive_stt_engine)
         self.active_stt_engine = active_stt_engine
         self._logger.info("Initializing PyAudio. ALSA/Jack error messages " +
                           "that pop up during this process are normal and " +
@@ -177,8 +178,11 @@ class Mic:
             f.seek(0)
             # check if PERSONA was said
             transcribed = self.passive_stt_engine.transcribe(f)
+	    print("::: STT_TRANSCRIBED:", transcribed)
+	    print("::: LOOKING FOR PERSONA:", PERSONA)
 
-        if any(PERSONA in phrase for phrase in transcribed):
+        #if any(PERSONA in phrase for phrase in transcribed):
+	if PERSONA == transcribed:
             return (THRESHOLD, PERSONA)
 
         return (False, transcribed)
@@ -192,7 +196,8 @@ class Mic:
 
         options = self.activeListenToAllOptions(THRESHOLD, LISTEN, MUSIC)
         if options:
-            return options[0]
+	    print("::: OPTION[0]: ", options)
+            return options
 
     def activeListenToAllOptions(self, THRESHOLD=None, LISTEN=True,
                                  MUSIC=False):
@@ -222,7 +227,7 @@ class Mic:
         frames = []
         # increasing the range # results in longer pause after command
         # generation
-        lastN = [THRESHOLD * 1.2 for i in range(30)]
+        lastN = [THRESHOLD * 1.6 for i in range(60)]
 
         for i in range(0, RATE / CHUNK * LISTEN_TIME):
 
@@ -236,7 +241,7 @@ class Mic:
             average = sum(lastN) / float(len(lastN))
 
             # TODO: 0.8 should not be a MAGIC NUMBER!
-            if average < THRESHOLD * 0.8:
+            if average < THRESHOLD * 0.4:
                 break
 
         self.speaker.play(jasperpath.data('audio', 'beep_lo.wav'))
