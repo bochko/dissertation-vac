@@ -123,10 +123,9 @@ class PocketSphinxSTT(AbstractSTTEngine):
                                  hmm_dir, ', '.join(missing_hmm_files))
 
 	psConfig = ps.Decoder.default_config() 
- 	psConfig.set_string('-hmm', hmm_dir)
-
- 	psConfig.set_string('-lm', vocabulary.decoder_kwargs['lm']) 
- 	psConfig.set_string('-dict', vocabulary.decoder_kwargs['dict']) 
+ 	psConfig.set_string('-hmm', os.path.join(hmm_dir, 'en-us/en-us'))
+ 	psConfig.set_string('-lm', os.path.join(hmm_dir, 'en-us/en-us.lm.bin')) 
+ 	psConfig.set_string('-dict', os.path.join(hmm_dir, 'en-us/cmudict-en-us.dict')) 
  	self._decoder = ps.Decoder(psConfig)
         #self._decoder = ps.Decoder(hmm=hmm_dir, logfn=self._logfile,
                                    #**vocabulary.decoder_kwargs)
