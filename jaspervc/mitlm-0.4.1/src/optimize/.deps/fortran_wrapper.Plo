@@ -1,0 +1,4 @@
+src/optimize/fortran_wrapper.lo: src/optimize/fortran_wrapper.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
