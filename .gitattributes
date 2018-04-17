@@ -1,1 +1,3 @@
 jaspervc/openfst-1.3.4/src/script/.libs/libfstscript.so.1.0.0 filter=lfs diff=lfs merge=lfs -text
+jaspervc/phonetisaurus/g014b2b.fst.txt filter=lfs diff=lfs merge=lfs -text
+jaspervc/phonetisaurus/g014b2b.arpa filter=lfs diff=lfs merge=lfs -text
