@@ -2,7 +2,9 @@
 #include <unistd.h>
 #include <csignal>
 #include <wait.h>
+#include <stdlib.h>
 #include <fstream>
+#include <fcntl.h>
 #include "ansic_log.h"
 
 #define FSYSCOORD_ID        0x00
@@ -39,20 +41,16 @@ int fork_and_assign_to_handle(hproc_t *proc_handle);
 int start_process(std::string bin_path, char **args);
 int terminate_process(hproc_t *proc_handle);
 void block_until_death(void);
-int check_conf_file(const char *path);
-int create_conf_file(const char *path);
-int read_conf_file(fsysconf_t *conf);
 proc_metadata_t kill_exec_restart(int condition, hpipe_t *pipe, hproc_t *fsys_notify, hproc_t *fsys_informer, char **argv);
-
 
 int open_shared_fifo(hpipe_t *pipe_handle) {
     int pipefd[2];
-    int res = pipe(pipefd);
+    int res = pipe2(pipefd, O_DIRECT);
     if (!res) {
         std::cout << "created pipe" << std::endl;
         /* populate handle */
-        pipe_handle->pipein = pipefd[0];
-        pipe_handle->pipeout = pipefd[1];
+        pipe_handle->pipein = pipefd[1];
+        pipe_handle->pipeout = pipefd[0];
         return 1;
     } else {
         std::cout << "failed to create a pipe" << std::endl;
@@ -84,8 +82,10 @@ int fork_and_assign_to_handle(hproc_t *proc_handle) {
     }
 }
 
-int start_process(std::string bin_path, char **args) {
-    execv(bin_path.c_str(), args);
+int start_process(std::string bin_path,  char **args) {
+    int s = execv(bin_path.c_str(), args);
+    std::cout << "EXECV = " << s << " ERRNO = " << errno << std::endl;
+    return s;
 }
 
 int terminate_process(hproc_t *proc_handle) {
@@ -105,54 +105,62 @@ void block_until_death(void) {
 proc_metadata_t restart_id;
 
 int main(int argc, char **argv) {
-//    if (argc == 1) {
-//        /* if only exec name passed as argument, check
-//         * for default configuration file */
-//        struct stat buffer;
-//        int conf_status = stat("fsyscoord.conf", &buffer);
-//        /* if config file doesn't exist, create a template one and exit */
-//        if(conf_status != 0) {
-//            std::ofstream fil;
-//            fil.open("fsyscoord.conf", std::ofstream::out | std::ofstream::in);
-//            fil.close();
-//            std::cout << "Please populate template fsyscoord.conf and try again" << std::endl;
-//        }
-//    }
-//    else if(argc != 3) {
-//        std::cout << "./fsyscoord [~/path/to/fsysnotify] [~/path/to/fsysinformer]" << std::endl;
-//        exit(EXIT_FAILURE);
-//    }
+
+    if(argc != 4) {
+        std::cout << "./fsyscoord <~/path/to/fsysnotify> <~/path/to/fsysinformer> <fsysinformer database fpath>" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
     ansic_log(LOG_DEBUG, "FSysCoordinator :: Started. Attempting to spawn children...");
     hproc_t fsysnotify;
-    fsysnotify.execp = std::string("/home/boyan/Dissertation/dissertation-main/bin/fsysnotify");
+    fsysnotify.execp = std::string(argv[1]);
     hproc_t fsysinformer;
-    fsysinformer.execp = std::string("/home/boyan/Dissertation/dissertation-main/bin/fsysnotify");
+    fsysinformer.execp = std::string(argv[2]);
     hpipe_t common_pipe;
 
     restart_id = kill_exec_restart(RESTART_COND_INIT, &common_pipe, &fsysnotify, &fsysinformer, argv);
-    switch (restart_id.id) {
-        case FSYSCOORD_ID:
+
+        switch (restart_id.id) {
+        case FSYSCOORD_ID: {
             ansic_log(LOG_DEBUG, "FSysCoordinator :: Returned from restart. Entering FSysCoordinator logic");
             /* block until one of the children has exited */
             block_until_death();
             break;
-        case FSYSNOTIFY_ID:
+        }
+        case FSYSNOTIFY_ID: {
             ansic_log(LOG_DEBUG, "FSysCoordinator :: Returned from restart. Entering FSysNotify logic");
-            if (start_process(fsysnotify.execp, NULL)) {
+            /* generate arguments */
+            char numbuf[32] = {0};
+            sprintf(numbuf, "%d%c", restart_id.pipe.pipein, '\0');
+            char *fnargs[] = {(char *) fsysnotify.execp.c_str(), numbuf, NULL};
+            std:: cout << fnargs[0] << " " << fnargs[1] << std::endl;
+            /**/
+            if (start_process(fsysnotify.execp, fnargs)) {
                 ansic_log(LOG_CRITICAL, "FSysCoordinator :: Could not start FSysNotify");
                 exit(EXIT_FAILURE);
             }
             break;
-        case FSYSINFORMER_ID:
+        }
+        case FSYSINFORMER_ID: {
             ansic_log(LOG_DEBUG, "FsysCoordinator :: Returned from restart. Entering FSysInformer logic");
-             if (start_process(fsysinformer.execp, NULL)) {
+            /* generate arguments */
+            char numbuf[32] = {0};
+            sprintf(numbuf, "%d%c", restart_id.pipe.pipeout, '\0');
+            char *fiargs[] = {(char *) fsysinformer.execp.c_str(), numbuf, argv[3], NULL};
+
+            std::cout << fiargs[0] << " " << fiargs[1] << " " << fiargs[2] << std::endl;
+
+            if (start_process(fsysinformer.execp, fiargs)) {
                 std::cout << "Problem with execution of " << fsysinformer.execp << std::endl;
             }
             break;
-        default:
-            ansic_log(LOG_ERROR, "FsysCoordinator :: Returned from restart. Received nonsense. Restarting everything...");
+        }
+        default: {
+            ansic_log(LOG_ERROR,
+                      "FsysCoordinator :: Returned from restart. Received nonsense. Restarting everything...");
             std::cout << "We messed up boys. RESTART_ID returned with something wonky." << std::endl;
             break;
+        }
     }
     kill_exec_restart(RESTART_COND_INIT, &common_pipe, &fsysnotify, &fsysinformer, argv);
 }

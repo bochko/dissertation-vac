@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
     } else {
         FSInformer::FSInformerHandler handler = FSInformer::FSInformerHandler();
         //handler.init(atoi(argv[1]), std::string(argv[2]));
-        handler.init(atoi("0"), std::string("temp.db"));
+        handler.init(atoi(argv[1]), std::string(argv[2]));
         handler.start();
         exit(EXIT_SUCCESS);
     }

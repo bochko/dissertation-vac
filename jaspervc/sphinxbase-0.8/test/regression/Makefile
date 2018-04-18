@@ -198,10 +198,10 @@ CLEANFILES = test*.err test*.out		\
 	chan3.wav.mfc				\
 	chan3.raw.mfc
 
-#TESTS = $(srcdir)/test-*.sh
+TESTS = $(srcdir)/test-*.sh
 
 # Disable sphinx_fe tests for now if fixed-point due to imprecision
-TESTS = $(srcdir)/test-cepview.sh $(srcdir)/test-sphinx_pitch.sh
+#TESTS = $(srcdir)/test-cepview.sh $(srcdir)/test-sphinx_pitch.sh
 all: all-am
 
 .SUFFIXES:

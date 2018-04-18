@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     if(argc != 2) {
         std::cout << "Unsuitable arguments passed to executable \"fsnotify\"" << std::endl;
         std::cout << "Usage: fsnotify <pipe write fdesc>" << std::endl << "terminating process..." << std::endl;
-        exit(EXIT_FAILURE);
+        while(1);
     }
 
     FSNotify::FSNotifyHandler handler;

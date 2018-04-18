@@ -12,13 +12,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a83ed75b-8a81-4cf3-89cc-867132c5dca2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../bin/fsyscoord" afterPath="$PROJECT_DIR$/../bin/fsyscoord" />
+      <change beforePath="$PROJECT_DIR$/../bin/fsysnotify" afterPath="$PROJECT_DIR$/../bin/fsysnotify" />
+      <change beforePath="$PROJECT_DIR$/../config/fsyscoor.conf" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../fsyscoordinator/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsyscoordinator/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/depend.make" afterPath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/depend.make" />
+      <change beforePath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/CXX.includecache" />
+      <change beforePath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/fsyscoord" afterPath="$PROJECT_DIR$/../fsyscoordinator/cmake-build-debug/fsyscoord" />
       <change beforePath="$PROJECT_DIR$/../fsyscoordinator/main.cpp" afterPath="$PROJECT_DIR$/../fsyscoordinator/main.cpp" />
-      <change beforePath="$PROJECT_DIR$/fsnotify.cpp" afterPath="$PROJECT_DIR$/fsnotify.cpp" />
-      <change beforePath="$PROJECT_DIR$/fsnotify.h" afterPath="$PROJECT_DIR$/fsnotify.h" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/main.cpp" afterPath="$PROJECT_DIR$/../fsysinformer/main.cpp" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsysnotify.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsysnotify.dir/main.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/fsysnotify" afterPath="$PROJECT_DIR$/cmake-build-debug/fsysnotify" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.log" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.log" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.status" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.status" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/config.h" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/config.h" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/sphinx_config.h" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/sphinx_config.h" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxad/.libs/libsphinxad.so.0.0.1T" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.a" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.so.1.1.1" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.so.1.1.1" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_interface.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_interface.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_sigproc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_sigproc.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_warp.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_warp.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/libsphinxfe.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/libsphinxfe.a" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_interface.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_interface.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_sigproc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_sigproc.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_warp.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_warp.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/agc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/agc.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn_prior.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn_prior.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/feat.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/feat.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/lda.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/lda.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/libsphinxfeat.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/libsphinxfeat.a" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/agc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/agc.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn_prior.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn_prior.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/feat.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/feat.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/lda.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/lda.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/.libs/sphinx_fe" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/.libs/sphinx_fe" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/sphinx_fe.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/sphinx_fe.o" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/test/regression/Makefile" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/test/regression/Makefile" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +81,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="234">
+              <caret line="9" column="112" lean-forward="true" selection-start-line="9" selection-start-column="112" selection-end-line="9" selection-end-column="112" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -56,7 +93,7 @@
       <file leaf-file-name="fsnotify.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fsnotify.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864">
+            <state relative-caret-position="-3048">
               <caret line="88" column="34" lean-forward="false" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
               <folding>
                 <element signature="e#416#434#0" expanded="true" />
@@ -157,7 +194,7 @@
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="fsysnotify" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fsysnotify" TARGET_NAME="fsysnotify" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fsysnotify" RUN_TARGET_NAME="fsysnotify">
+    <configuration name="fsysnotify" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="0" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fsysnotify" TARGET_NAME="fsysnotify" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fsysnotify" RUN_TARGET_NAME="fsysnotify">
       <envs />
     </configuration>
     <list size="2">
@@ -181,12 +218,12 @@
       <workItem from="1523179858938" duration="786000" />
       <workItem from="1523195731929" duration="1334000" />
       <workItem from="1523272637029" duration="1061000" />
-      <workItem from="1524004863497" duration="6907000" />
+      <workItem from="1524004863497" duration="11132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10088000" />
+    <option name="totallyTimeSpent" value="14313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -423,7 +460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fsnotify.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
+        <state relative-caret-position="-3048">
           <caret line="88" column="34" lean-forward="false" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
           <folding>
             <element signature="e#416#434#0" expanded="true" />
@@ -433,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="234">
+          <caret line="9" column="112" lean-forward="true" selection-start-line="9" selection-start-column="112" selection-end-line="9" selection-end-column="112" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

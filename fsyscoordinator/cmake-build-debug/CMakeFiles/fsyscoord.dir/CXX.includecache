@@ -27,7 +27,11 @@ csignal
 -
 wait.h
 -
+stdlib.h
+-
 fstream
+-
+fcntl.h
 -
 ansic_log.h
 /home/boyan/Dissertation/dissertation-main/fsyscoordinator/ansic_log.h
