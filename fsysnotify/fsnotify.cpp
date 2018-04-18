@@ -46,7 +46,7 @@ FSNotify::FSNotifyHandler::~FSNotifyHandler() {
 
 FSNotify::FSNRESULT
 FSNotify::FSNotifyHandler::init(std::vector<std::string> directory_index,
-                                int pipefd[2]) {
+                                int pipefd) {
 
     FSNRESULT res;
     /**
@@ -86,6 +86,7 @@ FSNotify::FSNotifyHandler::init(std::vector<std::string> directory_index,
 
     /* piece up designated pipe information */
     //memcpy(this->pipefd, pipefd, sizeof(int) * 2);
+    this->pipe_write_end = pipefd;
     /* res may not entirely reflect all errors that occured in initialization
      * but it should show the last one, which can help debugging */
     return res;
@@ -122,10 +123,16 @@ FSNotify::FSNotifyHandler::start(std::function<void(Args...)> &&function,
         if (!this->write_bufferspace.empty()) {
             auto iterator = this->write_bufferspace.begin();
             FSNRESULT piperes = FSN_OK;
-            std::for_each(this->write_bufferspace.begin(), this->write_bufferspace.end(), [this, &iterator](FSNEventLog_t eventnfo) {
-                // SEND IT FLYING THROUGH SPACE (the pipe)
 
-                /* THIS IS WHERE WE SENT THROUGH SPACE */
+            std::for_each(this->write_bufferspace.begin(), this->write_bufferspace.end(), [this, &iterator](FSNEventLog_t eventnfo) {
+                // serialize
+                FSNEventLogSerializable_t serialized_data = eventlog_to_serializable(&eventnfo);
+                // SEND IT FLYING THROUGH SPACE (the pipe)
+                /**
+                 * THIS WILL BLOCK AS PIPE SHOULD HAVE BEEN CREATED WITHOUT THE O_NONBLOCK flag
+                 * ALSO, IF pipefd UNINITIALIZED IT WILL WRITE TO NULL, which is stdout
+                 */
+                write(this->pipe_write_end, &serialized_data, sizeof(FSNEventLogSerializable_t));
 
                 this->write_bufferspace.erase(this->write_bufferspace.begin());
                 /* sending element from buffer after sending it to space, address should remain constant */

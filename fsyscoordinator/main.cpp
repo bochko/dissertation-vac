@@ -138,15 +138,16 @@ int main(int argc, char **argv) {
             break;
         case FSYSNOTIFY_ID:
             ansic_log(LOG_DEBUG, "FSysCoordinator :: Returned from restart. Entering FSysNotify logic");
-            /*if (start_process(fsysnotify.execp, NULL)) {
-                std::cout << "Problem with execution of " << fsysnotify.execp << std::endl;
-            }*/
+            if (start_process(fsysnotify.execp, NULL)) {
+                ansic_log(LOG_CRITICAL, "FSysCoordinator :: Could not start FSysNotify");
+                exit(EXIT_FAILURE);
+            }
             break;
         case FSYSINFORMER_ID:
             ansic_log(LOG_DEBUG, "FsysCoordinator :: Returned from restart. Entering FSysInformer logic");
-             /*if (start_process(fsysinformer.execp, NULL)) {
+             if (start_process(fsysinformer.execp, NULL)) {
                 std::cout << "Problem with execution of " << fsysinformer.execp << std::endl;
-            }*/
+            }
             break;
         default:
             ansic_log(LOG_ERROR, "FsysCoordinator :: Returned from restart. Received nonsense. Restarting everything...");

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/fsysinformer.dir/main.cpp.o CMakeFiles/fsysinformer.dir/fsinformer.cpp.o  -o fsysinformer 

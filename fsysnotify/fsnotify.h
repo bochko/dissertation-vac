@@ -93,14 +93,14 @@ namespace FSNotify {
         FSNContainer_t fsnc;
         std::vector<std::string> dir_index;
         std::vector<FSNEventLog_t> write_bufferspace;
-        int pipefd[2];
+        int pipe_write_end;
 
 
     public:
         FSNotifyHandler();
         ~FSNotifyHandler();
 
-        FSNRESULT init( std::vector<std::string> directory_index, int pipefd[2]);
+        FSNRESULT init( std::vector<std::string> directory_index, int pipefd);
 
         FSNRESULT fdvector_to_watch(std::vector<std::string> dirindex, FSNContainer_t * fsncptr);
 

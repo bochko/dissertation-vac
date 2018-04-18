@@ -5,11 +5,11 @@
 #include "fsnotify.h"
 
 int main(int argc, char** argv) {
-    /*if(argc != 3) {
+    if(argc != 2) {
         std::cout << "Unsuitable arguments passed to executable \"fsnotify\"" << std::endl;
-        std::cout << "Usage: fsnotify <pipe read identifier> <pipe write identifier>" << std::endl << "terminating process..." << std::endl;
+        std::cout << "Usage: fsnotify <pipe write fdesc>" << std::endl << "terminating process..." << std::endl;
         exit(EXIT_FAILURE);
-    }*/
+    }
 
     FSNotify::FSNotifyHandler handler;
     std::vector<std::string> idir;
@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     FSNotify::idirrec(HOME_PATH, idir);
 
     std::cout << "Handler initialization has started..." << std::endl;
-    handler.init(idir, 0);
+    handler.init(idir, atoi(argv[1]));
     std::cout << "Handler initialization has finished..." << std::endl;
     std::cout << "Number of directories watched: " << idir.size() << std::endl;
     handler.start();
