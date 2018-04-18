@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <unistd.h>
 #include "fsinformer.h"
+#include "../fsysnotify/fsnotify.h"
 #include <fstream>
 #include <sys/file.h>
 #include <cstring>
@@ -25,6 +26,8 @@ void FSInformer::FSInformerHandler::init(int pipe_read_end, std::string database
     signal(SIGUSR1, this->unlock_database_signal_handler);
     signal(SIGINT, this->release_lock);
     signal(SIGTERM, this->release_lock);
+    signal(SIGKILL, this->release_lock);
+    signal(SIGABRT, this->release_lock);
     this->pipe_read_end = pipe_read_end;
     this->database_path = database_path;
     std::cout << "FSysInformer initialized: pipe = " << this->pipe_read_end << " database path = " << this->database_path << std::endl;
@@ -43,12 +46,14 @@ void FSInformer::FSInformerHandler::start(void) {
     }
 
     for (;;) {
-        if (!(flock(dbfd, LOCK_EX | LOCK_NB))) {
+        if (dbfd > 0) {
             auto *log = (FSNotify::FSNEventLogSerializable_t *) malloc(sizeof(FSNotify::FSNEventLogSerializable_t));
 
             std::cout << "FSysInformer :: Waiting to read from pipe";
-            read(this->pipe_read_end, &log, sizeof(FSNotify::FSNEventLogSerializable_t));
-            std::cout << "FSysInformer :: Read whole package from pipe";
+            read(this->pipe_read_end, log, sizeof(FSNotify::FSNEventLogSerializable_t));
+            std::cout << "FSysInformer :: Read whole package from pipe:" <<std::endl;
+            std::cout << "OBJ:  " << log->filepath <<std::endl;
+
 
 
             if (log->is_file) {
@@ -99,24 +104,27 @@ void FSInformer::FSInformerHandler::start(void) {
             }
             free(log);
         }
-        if (FSInformer::FSInformerHandler::flag_release_lock == 1) {
+        if (FSInformer::FSInformerHandler::flag_release_lock == 0) {
             /* write out the changes,
              * this step is needed only before the release of the lock
              * as in any other state no other process can
              * read it */
+
             ftruncate(dbfd, (__off_t) sizeof(FSNotify::FSNEventLogSerializable_t));
+
             size_t dblen = strlen((const char *) database.last_edited_file) +
                            strlen((const char *) database.last_created_file) +
                            strlen((const char *) database.last_moved_file);
             auto *wbuf = (char *) malloc(dblen);
             sprintf(wbuf, "%s\r\n%s\r\n%s\r\n", (const char *) database.last_edited_file,
                     (const char *) database.last_created_file, (const char *) database.last_moved_file);
+
             write(dbfd, wbuf, dblen);
+
             free(wbuf);
-            flock(dbfd, LOCK_UN);
-            sleep(3);
-            flock(dbfd, LOCK_EX);
+        } else {
             FSInformer::FSInformerHandler::flag_release_lock = 0;
+            sleep(3);
         }
         /* file edited code */
     }
@@ -130,6 +138,5 @@ void FSInformer::FSInformerHandler::unlock_database_signal_handler(int arg) {
 }
 
 void FSInformer::FSInformerHandler::release_lock(int arg) {
-    flock(FSInformer::FSInformerHandler::dbfd, LOCK_UN);
     close(FSInformer::FSInformerHandler::dbfd);
 }

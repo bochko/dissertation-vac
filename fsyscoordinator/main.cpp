@@ -20,8 +20,8 @@ typedef struct {
 } hproc_t;
 
 typedef struct {
-    int pipein;
-    int pipeout;
+    int pipewr;
+    int piperd;
 } hpipe_t;
 
 typedef struct {
@@ -44,13 +44,13 @@ void block_until_death(void);
 proc_metadata_t kill_exec_restart(int condition, hpipe_t *pipe, hproc_t *fsys_notify, hproc_t *fsys_informer, char **argv);
 
 int open_shared_fifo(hpipe_t *pipe_handle) {
-    int pipefd[2];
-    int res = pipe2(pipefd, O_DIRECT);
+    int pipefd[2] = {0};
+    int res = pipe(pipefd);
     if (!res) {
         std::cout << "created pipe" << std::endl;
         /* populate handle */
-        pipe_handle->pipein = pipefd[1];
-        pipe_handle->pipeout = pipefd[0];
+        pipe_handle->pipewr = pipefd[1];
+        pipe_handle->piperd = pipefd[0];
         return 1;
     } else {
         std::cout << "failed to create a pipe" << std::endl;
@@ -60,12 +60,17 @@ int open_shared_fifo(hpipe_t *pipe_handle) {
 
 int discard_shared_fifo(hpipe_t *pipe_handle) {
     /* close file entries associated with fd's */
-    int res = close(pipe_handle->pipein);
-    if (res) return 0;
-    res = close(pipe_handle->pipeout);
-    if (res) return 0;
-    pipe_handle->pipein = 0;
-    pipe_handle->pipeout = 0;
+    int res;
+    if(pipe_handle->pipewr) {
+        res = close(pipe_handle->pipewr);
+        if (res) return 0;
+    }
+    if(pipe_handle->piperd) {
+        res = close(pipe_handle->piperd);
+        if (res) return 0;
+    }
+    pipe_handle->pipewr = 0;
+    pipe_handle->piperd = 0;
     return 1;
 }
 
@@ -131,7 +136,7 @@ int main(int argc, char **argv) {
             ansic_log(LOG_DEBUG, "FSysCoordinator :: Returned from restart. Entering FSysNotify logic");
             /* generate arguments */
             char numbuf[32] = {0};
-            sprintf(numbuf, "%d%c", restart_id.pipe.pipein, '\0');
+            sprintf(numbuf, "%d%c", restart_id.pipe.pipewr, '\0');
             char *fnargs[] = {(char *) fsysnotify.execp.c_str(), numbuf, NULL};
             std:: cout << fnargs[0] << " " << fnargs[1] << std::endl;
             /**/
@@ -145,7 +150,7 @@ int main(int argc, char **argv) {
             ansic_log(LOG_DEBUG, "FsysCoordinator :: Returned from restart. Entering FSysInformer logic");
             /* generate arguments */
             char numbuf[32] = {0};
-            sprintf(numbuf, "%d%c", restart_id.pipe.pipeout, '\0');
+            sprintf(numbuf, "%d%c", restart_id.pipe.piperd, '\0');
             char *fiargs[] = {(char *) fsysinformer.execp.c_str(), numbuf, argv[3], NULL};
 
             std::cout << fiargs[0] << " " << fiargs[1] << " " << fiargs[2] << std::endl;
@@ -188,8 +193,8 @@ kill_exec_restart(int condition, hpipe_t *pipe, hproc_t *fsys_notify, hproc_t *f
          * which fork is which */
         proc_metadata_t metadata;
         open_shared_fifo(pipe);
-        metadata.pipe.pipein = pipe->pipein;
-        metadata.pipe.pipeout = pipe->pipeout;
+        metadata.pipe.pipewr = pipe->pipewr;
+        metadata.pipe.piperd = pipe->piperd;
 
         /** start fsysnotify */
         fork_and_assign_to_handle(fsys_notify);

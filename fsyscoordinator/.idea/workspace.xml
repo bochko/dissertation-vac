@@ -12,50 +12,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b803b4a-3ee2-4e7c-a905-112b831606e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../bin/fsyscoord" afterPath="$PROJECT_DIR$/../bin/fsyscoord" />
+      <change beforePath="$PROJECT_DIR$/../bin/fsysinformer" afterPath="$PROJECT_DIR$/../bin/fsysinformer" />
       <change beforePath="$PROJECT_DIR$/../bin/fsysnotify" afterPath="$PROJECT_DIR$/../bin/fsysnotify" />
-      <change beforePath="$PROJECT_DIR$/../config/fsyscoor.conf" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsyscoord.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsyscoord.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fsyscoord.dir/main.cpp.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/fsyscoord" afterPath="$PROJECT_DIR$/cmake-build-debug/fsyscoord" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" />
-      <change beforePath="$PROJECT_DIR$/../fsysinformer/main.cpp" afterPath="$PROJECT_DIR$/../fsysinformer/main.cpp" />
+      <change beforePath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" afterPath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" />
       <change beforePath="$PROJECT_DIR$/../fsysnotify/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysnotify/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/main.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/fsnotify.cpp.o" afterPath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/fsnotify.cpp.o" />
+      <change beforePath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/idir.cpp.o" afterPath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/CMakeFiles/fsysnotify.dir/idir.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/fsysnotify" afterPath="$PROJECT_DIR$/../fsysnotify/cmake-build-debug/fsysnotify" />
-      <change beforePath="$PROJECT_DIR$/../fsysnotify/main.cpp" afterPath="$PROJECT_DIR$/../fsysnotify/main.cpp" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.log" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.log" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.status" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/config.status" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/config.h" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/config.h" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/sphinx_config.h" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/include/sphinx_config.h" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxad/.libs/libsphinxad.so.0.0.1T" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.a" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.so.1.1.1" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/.libs/libsphinxbase.so.1.1.1" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_interface.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_interface.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_sigproc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_sigproc.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_warp.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/fe_warp.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/libsphinxfe.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/.libs/libsphinxfe.a" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_interface.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_interface.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_sigproc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_sigproc.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_warp.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/fe/fe_warp.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/agc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/agc.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn_prior.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/cmn_prior.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/feat.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/feat.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/lda.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/lda.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/libsphinxfeat.a" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/.libs/libsphinxfeat.a" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/agc.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/agc.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn_prior.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/cmn_prior.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/feat.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/feat.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/lda.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/libsphinxbase/feat/lda.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/.libs/sphinx_fe" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/.libs/sphinx_fe" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/sphinx_fe.o" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/src/sphinx_fe/sphinx_fe.o" />
-      <change beforePath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/test/regression/Makefile" afterPath="$PROJECT_DIR$/../jaspervc/sphinxbase-0.8/test/regression/Makefile" />
+      <change beforePath="$PROJECT_DIR$/../fsysnotify/fsnotify.cpp" afterPath="$PROJECT_DIR$/../fsysnotify/fsnotify.cpp" />
+      <change beforePath="$PROJECT_DIR$/../fsysnotify/idir.cpp" afterPath="$PROJECT_DIR$/../fsysnotify/idir.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,8 +43,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+            <state relative-caret-position="3016">
+              <caret line="152" column="58" lean-forward="false" selection-start-line="152" selection-start-column="58" selection-end-line="152" selection-end-column="58" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -83,7 +55,7 @@
       <file leaf-file-name="fsyscoord.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fsyscoord.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="272">
               <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
@@ -167,7 +139,7 @@
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fsyscoord" RUN_TARGET_NAME="fsyscoord" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="fsyscoord" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;$PROJECT_DIR$/../bin/fsysnotify&quot; &quot;$PROJECT_DIR$/../bin/fsysinformer&quot; &quot;home/boyan/Dissertation/temp/temp.db&quot; " PASS_PARENT_ENVS_2="true" PROJECT_NAME="fsyscoord" TARGET_NAME="fsyscoord" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fsyscoord" RUN_TARGET_NAME="fsyscoord">
+    <configuration name="fsyscoord" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;$PROJECT_DIR$/../bin/fsysnotify&quot; &quot;$PROJECT_DIR$/../bin/fsysinformer&quot; &quot;$PROJECT_DIR$/../.hidden/temp.db&quot;" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fsyscoord" TARGET_NAME="fsyscoord" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fsyscoord" RUN_TARGET_NAME="fsyscoord">
       <envs />
     </configuration>
     <list size="2">
@@ -194,12 +166,13 @@
       <workItem from="1523272838806" duration="811000" />
       <workItem from="1523274923005" duration="609000" />
       <workItem from="1524004320289" duration="544000" />
-      <workItem from="1524018193109" duration="6318000" />
+      <workItem from="1524018193109" duration="6359000" />
+      <workItem from="1524025222450" duration="4336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17834000" />
+    <option name="totallyTimeSpent" value="22211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -214,7 +187,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46112886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6112886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -238,11 +211,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fsyscoord.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -372,7 +365,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fsyscoord.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="272">
           <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
@@ -382,8 +375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        <state relative-caret-position="3016">
+          <caret line="152" column="58" lean-forward="false" selection-start-line="152" selection-start-column="58" selection-end-line="152" selection-end-column="58" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

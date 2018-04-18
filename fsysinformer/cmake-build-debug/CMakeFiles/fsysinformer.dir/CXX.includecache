@@ -13,6 +13,8 @@ unistd.h
 -
 fsinformer.h
 /home/boyan/Dissertation/dissertation-main/fsysinformer/fsinformer.h
+../fsysnotify/fsnotify.h
+/home/boyan/Dissertation/dissertation-main/fsysnotify/fsnotify.h
 fstream
 -
 sys/file.h

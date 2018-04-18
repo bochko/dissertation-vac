@@ -32,7 +32,7 @@ namespace FSNotify {
 #endif
                         std::string path;
                         path.append(pdir).append("/").append(ent->d_name);
-                        std::cout << path << std::endl;
+                        //std::cout << path << std::endl;
                         iterator = directory_list.end();
                         directory_list.insert(iterator, path);
                         idirrec(path, directory_list);

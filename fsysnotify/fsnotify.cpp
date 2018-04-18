@@ -130,9 +130,12 @@ FSNotify::FSNotifyHandler::start(std::function<void(Args...)> &&function,
                 // SEND IT FLYING THROUGH SPACE (the pipe)
                 /**
                  * THIS WILL BLOCK AS PIPE SHOULD HAVE BEEN CREATED WITHOUT THE O_NONBLOCK flag
-                 * ALSO, IF pipefd UNINITIALIZED IT WILL WRITE TO NULL, which is stdout
+                 * ALSO, IF pipefd UNINITIALIZED IT WILL WRITE TO NULL, which is stdin
                  */
-                write(this->pipe_write_end, &serialized_data, sizeof(FSNEventLogSerializable_t));
+
+                if(write(this->pipe_write_end, &serialized_data, sizeof(FSNEventLogSerializable_t)) == -1) {
+                    std::cout << " PIPE FD = " << this->pipe_write_end << " ERRNO = " << errno <<std::endl;
+                }
 
                 this->write_bufferspace.erase(this->write_bufferspace.begin());
                 /* sending element from buffer after sending it to space, address should remain constant */
@@ -262,7 +265,7 @@ FSNotify::FSNotifyHandler::fdvector_to_watch(std::vector<std::string> dirindex,
                        * to the common watch descriptor vector */
                       fsnc->watchd.insert(fsnc->watchd.end(), inotify_add_watch(fsnc->fd, dir_path.c_str(),
                                                                                 FSN_EVENT));
-                      std::cout << dir_path << " ADDED TO WATCH" << std::endl;
+                      //std::cout << dir_path << " ADDED TO WATCH" << std::endl;
                       if (fsnc->watchd[i] == -1) {
                           fprintf(stderr, "Cannot watch '%s'\n", dir_path.c_str());
                           perror("inotify_add_watch");
