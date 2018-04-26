@@ -12,19 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a83ed75b-8a81-4cf3-89cc-867132c5dca2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../bin/README.md" afterPath="$PROJECT_DIR$/../bin/README.md" />
-      <change beforePath="$PROJECT_DIR$/../bin/fsyscoord" afterPath="$PROJECT_DIR$/../bin/fsyscoord" />
+      <change beforePath="$PROJECT_DIR$/../.hidden/data.db" afterPath="$PROJECT_DIR$/../.hidden/data.db" />
+      <change beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../bin/README3.md" afterPath="$PROJECT_DIR$/../bin/README3.md" />
       <change beforePath="$PROJECT_DIR$/../bin/fsysinformer" afterPath="$PROJECT_DIR$/../bin/fsysinformer" />
       <change beforePath="$PROJECT_DIR$/../fsyscoordinator/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsyscoordinator/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" afterPath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/fsinformer.h" afterPath="$PROJECT_DIR$/../fsysinformer/fsinformer.h" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/fsnotify.cpp" afterPath="$PROJECT_DIR$/fsnotify.cpp" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/client/modules/XDG_Nautilus.py" afterPath="$PROJECT_DIR$/../jaspervc/client/modules/XDG_Nautilus.py" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,7 +119,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
@@ -202,15 +202,15 @@
       <workItem from="1524004863497" duration="11132000" />
       <workItem from="1524027635650" duration="2145000" />
       <workItem from="1524105208224" duration="71000" />
-      <workItem from="1524731900239" duration="1840000" />
+      <workItem from="1524731900239" duration="2439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18369000" />
+    <option name="totallyTimeSpent" value="18968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

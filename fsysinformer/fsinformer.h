@@ -22,6 +22,7 @@ namespace FSInformer {
         uint8_t last_edited_file[FILENAME_MAX];
         uint8_t last_created_file[FILENAME_MAX];
         uint8_t last_moved_file[FILENAME_MAX];
+        uint8_t last_moved_origin[FILENAME_MAX];
     } FSInformerDatabase_t;
 
     class FSInformerHandler {

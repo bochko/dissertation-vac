@@ -12,19 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b803b4a-3ee2-4e7c-a905-112b831606e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../bin/README.md" afterPath="$PROJECT_DIR$/../bin/README.md" />
-      <change beforePath="$PROJECT_DIR$/../bin/fsyscoord" afterPath="$PROJECT_DIR$/../bin/fsyscoord" />
+      <change beforePath="$PROJECT_DIR$/../.hidden/data.db" afterPath="$PROJECT_DIR$/../.hidden/data.db" />
+      <change beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../bin/README3.md" afterPath="$PROJECT_DIR$/../bin/README3.md" />
       <change beforePath="$PROJECT_DIR$/../bin/fsysinformer" afterPath="$PROJECT_DIR$/../bin/fsysinformer" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysinformer/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/CXX.includecache" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/fsinformer.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/CMakeFiles/fsysinformer.dir/main.cpp.o" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" afterPath="$PROJECT_DIR$/../fsysinformer/cmake-build-debug/fsysinformer" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" afterPath="$PROJECT_DIR$/../fsysinformer/fsinformer.cpp" />
       <change beforePath="$PROJECT_DIR$/../fsysinformer/fsinformer.h" afterPath="$PROJECT_DIR$/../fsysinformer/fsinformer.h" />
       <change beforePath="$PROJECT_DIR$/../fsysnotify/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../fsysnotify/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../fsysnotify/fsnotify.cpp" afterPath="$PROJECT_DIR$/../fsysnotify/fsnotify.cpp" />
+      <change beforePath="$PROJECT_DIR$/../jaspervc/client/modules/XDG_Nautilus.py" afterPath="$PROJECT_DIR$/../jaspervc/client/modules/XDG_Nautilus.py" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="204" column="16" lean-forward="true" selection-start-line="204" selection-start-column="16" selection-end-line="204" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="194" column="31" lean-forward="true" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -80,7 +80,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
@@ -168,15 +168,15 @@
       <workItem from="1524025222450" duration="5094000" />
       <workItem from="1524105205492" duration="1326000" />
       <workItem from="1524344579701" duration="23000" />
-      <workItem from="1524726165662" duration="3606000" />
+      <workItem from="1524726165662" duration="6410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27924000" />
+    <option name="totallyTimeSpent" value="30728000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -436,8 +436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="204" column="16" lean-forward="true" selection-start-line="204" selection-start-column="16" selection-end-line="204" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="194" column="31" lean-forward="true" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

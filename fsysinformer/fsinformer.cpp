@@ -75,8 +75,14 @@ void FSInformer::FSInformerHandler::start(void) {
                                                  event.eventmask & FSN_EVENT_MOVED_FROM) {
                                           strncpy((char *) &(this->database.last_moved_file),
                                                   (const char *) log->filepath, FILENAME_MAX);
+                                          strncpy((char *) &(this->database.last_moved_origin), (const char *) event.filepath, FILENAME_MAX);
                                           std::cout << "LAST MOVED FILE: " << this->database.last_moved_file
                                                     << std::endl;
+                                          if(strcmp((const char *)this->database.last_moved_origin, (const char *)this->database.last_edited_file) == 0) {
+                                              memcpy(this->database.last_edited_file, this->database.last_moved_file, FILENAME_MAX);
+                                          } else if(strcmp((const char *)this->database.last_moved_origin, (const char *)this->database.last_created_file) == 0) {
+                                              memcpy(this->database.last_created_file, this->database.last_moved_file, FILENAME_MAX);
+                                          }
                                           found = true;
                                       }
                                       iterator += 1;
@@ -117,8 +123,8 @@ void FSInformer::FSInformerHandler::start(void) {
             std:: cout << "LEF " << database.last_edited_file << std::endl << "LCF " << database.last_created_file << std::endl
                        << "LMF " << database.last_moved_file << std::endl;
 
-            dbfd << database.last_edited_file << std::endl << database.last_created_file << std::endl
-                 << database.last_moved_file << std::endl;
+            dbfd << "LEF " << database.last_edited_file << std::endl << "LCF " << database.last_created_file << std::endl
+                 << "LMF " << database.last_moved_file << std::endl;
 
             dbfd.close();
 
