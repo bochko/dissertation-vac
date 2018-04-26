@@ -132,7 +132,6 @@ FSNotify::FSNotifyHandler::start(std::function<void(Args...)> &&function,
                  * THIS WILL BLOCK AS PIPE SHOULD HAVE BEEN CREATED WITHOUT THE O_NONBLOCK flag
                  * ALSO, IF pipefd UNINITIALIZED IT WILL WRITE TO NULL, which is stdin
                  */
-
                 if(write(this->pipe_write_end, &serialized_data, sizeof(FSNEventLogSerializable_t)) == -1) {
                     std::cout << " PIPE FD = " << this->pipe_write_end << " ERRNO = " << errno <<std::endl;
                 }

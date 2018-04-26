@@ -6,13 +6,11 @@
 #include <unistd.h>
 #include "fsinformer.h"
 #include "../fsysnotify/fsnotify.h"
-#include <fstream>
-#include <sys/file.h>
 #include <cstring>
 
 volatile sig_atomic_t FSInformer::FSInformerHandler::flag_release_lock;
 
-int FSInformer::FSInformerHandler::dbfd;
+std::ofstream FSInformer::FSInformerHandler::dbfd;
 
 FSInformer::FSInformerHandler::FSInformerHandler() {
     /* ensure we read from stdin by default */
@@ -30,7 +28,8 @@ void FSInformer::FSInformerHandler::init(int pipe_read_end, std::string database
     signal(SIGABRT, this->release_lock);
     this->pipe_read_end = pipe_read_end;
     this->database_path = database_path;
-    std::cout << "FSysInformer initialized: pipe = " << this->pipe_read_end << " database path = " << this->database_path << std::endl;
+    std::cout << "FSysInformer initialized: pipe = " << this->pipe_read_end << " database path = "
+              << this->database_path << std::endl;
 }
 
 #pragma clang diagnostic push
@@ -38,95 +37,94 @@ void FSInformer::FSInformerHandler::init(int pipe_read_end, std::string database
 
 void FSInformer::FSInformerHandler::start(void) {
 
-    FSInformer::FSInformerHandler::dbfd = open(this->database_path.c_str(), O_WRONLY | O_CREAT);
-
-    if(dbfd < 0) {
-        std::cout << "Could not open database file for writing. Check locks" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-
     for (;;) {
-        if (dbfd > 0) {
-            auto *log = (FSNotify::FSNEventLogSerializable_t *) malloc(sizeof(FSNotify::FSNEventLogSerializable_t));
+        bool changed = false;
+        auto *log = (FSNotify::FSNEventLogSerializable_t *) malloc(sizeof(FSNotify::FSNEventLogSerializable_t));
 
-            std::cout << "FSysInformer :: Waiting to read from pipe";
-            read(this->pipe_read_end, log, sizeof(FSNotify::FSNEventLogSerializable_t));
-            std::cout << "FSysInformer :: Read whole package from pipe:" <<std::endl;
-            std::cout << "OBJ:  " << log->filepath <<std::endl;
+        std::cout << "FSysInformer :: Waiting to read from pipe";
+        read(this->pipe_read_end, log, sizeof(FSNotify::FSNEventLogSerializable_t));
+        std::cout << "FSysInformer :: Read whole package from pipe:" << std::endl;
+        std::cout << "OBJ:  " << log->filepath << std::endl;
+        std::cout << "MASK: " << log->eventmask << std::endl;
+        if(log->is_file) {
+            std::cout << "IS FILE? " << "yes" << std::endl;
+        } else {
+            std::cout << "IS FILE? " << "no" << std::endl;
+        }
 
 
-
-            if (log->is_file) {
-                /* handle move events */
-                if (log->cookie != 0) {
-                    if (log->eventmask & FSN_EVENT_MOVED_FROM || log->eventmask & FSN_EVENT_MOVED_TO) {
-                        auto iterator = unresolved_events.begin();
-                        auto found = false;
-                        /* this is very unoptimized as it traverses everything */
-                        std::for_each(this->unresolved_events.begin(), this->unresolved_events.end(),
-                                      [&](FSNotify::FSNEventLogSerializable_t event) {
-                                          if (log->cookie == event.cookie && log->eventmask & FSN_EVENT_MOVED_FROM &&
-                                              event.eventmask & FSN_EVENT_MOVED_TO) {
-                                              /* file moved TO path is the one */
-                                              strncpy((char *) &(this->database.last_moved_file),
-                                                      (const char *) event.filepath, FILENAME_MAX);
-                                              found = true;
-                                          } else if (log->cookie == event.cookie &&
-                                                     log->eventmask & FSN_EVENT_MOVED_TO &&
-                                                     event.eventmask & FSN_EVENT_MOVED_FROM) {
-                                              strncpy((char *) &(this->database.last_moved_file),
-                                                      (const char *) log->filepath, FILENAME_MAX);
-                                              found = true;
-                                          }
-                                          iterator += 1;
-                                      });
-                        if (found) {
-                            found = false;
-                            this->unresolved_events.erase(iterator);
-                        } else {
-                            this->unresolved_events.insert(this->unresolved_events.begin(), *log);
-                        }
+            std::cout << "CAPTURED EVENT IS FILE..." << std::endl;
+            /* handle move events */
+            if (log->cookie != 0) {
+                if (log->eventmask & IN_MOVED_FROM || log->eventmask & IN_MOVED_TO) {
+                    changed = true;
+                    std::cout << "PREPARING TO RECORD A MOVE..." << std::endl;
+                    auto iterator = unresolved_events.begin();
+                    auto found = false;
+                    /* this is very unoptimized as it traverses everything */
+                    std::for_each(this->unresolved_events.begin(), this->unresolved_events.end(),
+                                  [&](FSNotify::FSNEventLogSerializable_t event) {
+                                      if (log->cookie == event.cookie && log->eventmask & FSN_EVENT_MOVED_FROM &&
+                                          event.eventmask & FSN_EVENT_MOVED_TO) {
+                                          /* file moved TO path is the one */
+                                          strncpy((char *) &(this->database.last_moved_file),
+                                                  (const char *) event.filepath, FILENAME_MAX);
+                                          found = true;
+                                      } else if (log->cookie == event.cookie &&
+                                                 log->eventmask & FSN_EVENT_MOVED_TO &&
+                                                 event.eventmask & FSN_EVENT_MOVED_FROM) {
+                                          strncpy((char *) &(this->database.last_moved_file),
+                                                  (const char *) log->filepath, FILENAME_MAX);
+                                          std::cout << "LAST MOVED FILE: " << this->database.last_moved_file
+                                                    << std::endl;
+                                          found = true;
+                                      }
+                                      iterator += 1;
+                                  });
+                    if (!found) {
+                        this->unresolved_events.insert(this->unresolved_events.begin(), *log);
                     }
                 }
-
-                    /* handle file creation */
-                else if (log->eventmask & FSN_EVENT_CREATE) {
-                    strncpy((char *) &(this->database.last_created_file), (const char *) log->filepath, FILENAME_MAX);
-                }
-
-                    /* handle file editing */
-                else if (log->eventmask & FSN_EVENT_WRITE) {
-                    strncpy((char *) &(this->database.last_edited_file), (const char *) log->filepath, FILENAME_MAX);
-                }
-
-            } else {
-                /* directory events to be monitored by nautilus extension */
             }
-            free(log);
-        }
-        if (FSInformer::FSInformerHandler::flag_release_lock == 0) {
+
+                /* handle file creation */
+            else if (log->eventmask & IN_CREATE) {
+                changed = true;
+                strncpy((char *) &(this->database.last_created_file), (const char *) log->filepath, FILENAME_MAX);
+                std::cout << "LAST CREATED FILE: " << this->database.last_created_file << std::endl;
+            }
+
+                /* handle file editing */
+            else if (log->eventmask & IN_CLOSE_WRITE) {
+                changed = true;
+                strncpy((char *) &(this->database.last_edited_file), (const char *) log->filepath, FILENAME_MAX);
+                std::cout << "LAST EDITED FILE: " << this->database.last_edited_file << std::endl;
+            }
+
+        if (FSInformer::FSInformerHandler::flag_release_lock == 0 && changed) {
             /* write out the changes,
              * this step is needed only before the release of the lock
              * as in any other state no other process can
              * read it */
-
-            ftruncate(dbfd, (__off_t) sizeof(FSNotify::FSNEventLogSerializable_t));
+            FSInformer::FSInformerHandler::dbfd.open("/home/boyan/Dissertation/dissertation-main/.hidden/data.db",
+                                                     std::ofstream::out | std::ios::binary | std::ofstream::trunc);
 
             size_t dblen = strlen((const char *) database.last_edited_file) +
                            strlen((const char *) database.last_created_file) +
                            strlen((const char *) database.last_moved_file);
-            auto *wbuf = (char *) malloc(dblen);
-            sprintf(wbuf, "%s\r\n%s\r\n%s\r\n", (const char *) database.last_edited_file,
-                    (const char *) database.last_created_file, (const char *) database.last_moved_file);
+            std::cout << "WRITING " << dblen << " SYMBOLS IN FILE..." << std::endl;
 
-            write(dbfd, wbuf, dblen);
+            std:: cout << "LEF " << database.last_edited_file << std::endl << "LCF " << database.last_created_file << std::endl
+                       << "LMF " << database.last_moved_file << std::endl;
 
-            free(wbuf);
-        } else {
-            FSInformer::FSInformerHandler::flag_release_lock = 0;
-            sleep(3);
+            dbfd << database.last_edited_file << std::endl << database.last_created_file << std::endl
+                 << database.last_moved_file << std::endl;
+
+            dbfd.close();
+
         }
         /* file edited code */
+        free(log);
     }
 }
 
@@ -138,5 +136,5 @@ void FSInformer::FSInformerHandler::unlock_database_signal_handler(int arg) {
 }
 
 void FSInformer::FSInformerHandler::release_lock(int arg) {
-    close(FSInformer::FSInformerHandler::dbfd);
+    dbfd.close();
 }

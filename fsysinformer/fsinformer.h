@@ -13,6 +13,7 @@
 #include <cstdint>
 #include <string>
 #include <deque>
+#include <fstream>
 #include "../fsysnotify/fsnotify.h"
 
 namespace FSInformer {
@@ -43,7 +44,7 @@ namespace FSInformer {
         * to be atomic and volatile */
         static volatile sig_atomic_t flag_release_lock;
 
-        static int dbfd;
+        static std::ofstream dbfd;
 
         FSInformerHandler();
         ~FSInformerHandler();
